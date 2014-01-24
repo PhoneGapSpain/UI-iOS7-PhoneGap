@@ -1,0 +1,67 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+<!--Llamada al css necesario-->
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<title>UX Design Native</title>
+</head>
+
+<body>
+<!--Creación de la página principal donde mostraremos el contenido de los 3 primeros botones del pie-->
+<div class="page">
+    <div class="header">
+        <div class="menuLeftHeader"></div>
+        <div class="titlePage"></div>
+        <div class="menuRightHeader">
+            <div class="botonHeader">            
+                <div id="Share" onClick="shareContent()" class="botonHeader-icon" data-icon="&#xe000;"></div>
+            </div>
+            <div class="botonHeader">  
+                <div id="New" onClick="newContent()" class="botonHeader-icon" data-icon="&#xe004;"></div>
+            </div>
+        </div>   
+    </div>
+    
+    <div id="content"></div>
+    
+    <div id="footer">
+        <div id="Home" onClick="changeContent('Home')" class="menuFooter">
+            <div class="botonFooter-icon" data-icon="&#xe005;"></div>
+            <div class="botonFooter-name">Home</div>
+        </div>       
+        <div id="Email" onClick="changeContent('Email')" class="menuFooter">
+            <div class="botonFooter-icon" data-icon="&#xe002;"></div>
+            <div class="botonFooter-name">Email</div>
+        </div>        
+        <div id="Favorite" onClick="changeContent('Favorite')" class="menuFooter">
+            <div class="botonFooter-icon" data-icon="&#xe003;"></div>
+            <div class="botonFooter-name">Favorite</div>
+        </div>
+        <div id="More" onClick="menuAdditional()" class="menuFooter">
+            <div class="botonFooter-icon" data-icon="&#xe006;"></div>
+            <div class="botonFooter-name">More</div>
+       </div>       
+    </div>
+</div>
+<!--Creación del menu lateral derecho donde mostraremos un listado de opciones adicionales-->
+<div id="menuAdditional" class="page right transition">
+	<div class="header">
+        <div class="menuLeftHeader">
+        	<div class="menuHeader">            
+                <div id="Back" onClick="back()" class="botonHeader-icon" data-icon="&#xe001;"></div>
+            </div>
+        </div>
+        <div class="titleMenuAdictional">Menu</div>
+        <div class="menuRightHeader"></div>   
+    </div>
+    <div id="contentMenu"></div>
+</div>
+
+<!--Llamada a los js necesarios-->
+<script type="text/javascript" src="js/xui-2.3.2.js"></script>
+<script type="text/javascript" src="js/fastclick.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+
+</body>
+</html>
